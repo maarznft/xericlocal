@@ -1,0 +1,297 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* XERIC Enhanced Brand Design System */
+
+@layer base {
+  :root {
+    --background: 249 250 251; /* Softer light gray background */
+    --foreground: 15 23 42; /* Dark slate text */
+
+    --card: 255 255 255; /* Pure white cards */
+    --card-foreground: 15 23 42; /* Dark text on cards */
+
+    --popover: 255 255 255;
+    --popover-foreground: 15 23 42;
+
+    --primary: 27 54 93; /* XERIC Navy Blue from logo */
+    --primary-foreground: 255 255 255;
+
+    --secondary: 37 99 235; /* XERIC Bright Blue from logo */
+    --secondary-foreground: 255 255 255;
+
+    --muted: 248 250 252; /* Very subtle gray */
+    --muted-foreground: 71 85 105;
+
+    --accent: 37 99 235; /* Using bright blue as accent */
+    --accent-foreground: 255 255 255;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+
+    --border: 229 231 235;
+    --input: 229 231 235;
+    --ring: 27 54 93;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 255 255 255;
+    --sidebar-foreground: 15 23 42;
+    --sidebar-primary: 27 54 93;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 248 250 252;
+    --sidebar-accent-foreground: 15 23 42;
+    --sidebar-border: 229 231 235;
+    --sidebar-ring: 37 99 235;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold leading-tight;
+  }
+
+  h1 {
+    @apply text-4xl lg:text-5xl xl:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl lg:text-3xl;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  /* Enhanced smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Enhanced gradient utilities for XERIC brand */
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, #1B365D 0%, #2563EB 50%, #3B82F6 100%);
+  }
+  
+  .gradient-accent {
+    background: linear-gradient(135deg, #2563EB 0%, #1B365D 50%, #3B82F6 100%);
+  }
+  
+  .gradient-secondary {
+    background: linear-gradient(135deg, #3B82F6 0%, #2563EB 50%, #1B365D 100%);
+  }
+
+  .gradient-card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.8) 100%);
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(229, 231, 235, 0.3);
+  }
+
+  /* Micro-interaction animations */
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .hover-glow {
+    transition: all 0.3s ease;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 20px rgba(27, 54, 93, 0.3);
+  }
+
+  .scale-on-hover {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .scale-on-hover:hover {
+    transform: scale(1.05);
+  }
+
+  .rotate-on-hover {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .rotate-on-hover:hover {
+    transform: rotate(5deg);
+  }
+
+  /* Loading animations */
+  .pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .bounce-soft {
+    animation: bounce 2s infinite;
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    background: linear-gradient(135deg, #1B365D 0%, #2563EB 50%, #3B82F6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Enhanced button styles */
+  .btn-primary {
+    @apply gradient-primary text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-primary/20 hover:border-primary/40;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-secondary/20 hover:border-secondary/40;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary font-semibold py-3 px-6 rounded-xl hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:border-primary/20;
+  }
+
+  /* Interactive elements */
+  .interactive {
+    @apply transition-all duration-200 hover:scale-105 cursor-pointer;
+  }
+
+  /* Shimmer effect */
+  .shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  /* Marquee animations */
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-100% - var(--gap))); }
+  }
+
+  @keyframes marquee-vertical {
+    from { transform: translateY(0); }
+    to { transform: translateY(calc(-100% - var(--gap))); }
+  }
+
+  .animate-marquee {
+    animation: marquee var(--duration) linear infinite;
+  }
+
+  .animate-marquee-vertical {
+    animation: marquee-vertical var(--duration) linear infinite;
+  }
+
+  /* Fade in animations */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Stagger animation */
+  .animate-stagger {
+    animation: stagger 0.8s ease-out;
+  }
+
+  @keyframes stagger {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Enhanced component-specific styles */
+@layer components {
+  .nav-link {
+    @apply relative overflow-hidden;
+  }
+
+  .nav-link::before {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-accent transform scale-x-0 transition-transform duration-300 origin-left;
+  }
+
+  .nav-link:hover::before {
+    @apply scale-x-100;
+  }
+
+  .feature-card {
+    @apply glass-card rounded-xl p-6 hover-lift hover-glow border border-border/50;
+  }
+
+  .service-card {
+    @apply bg-card border border-border rounded-xl p-6 card-hover group cursor-pointer;
+  }
+
+  .stat-card {
+    @apply text-center p-6 rounded-xl glass-card hover-lift;
+  }
+}
