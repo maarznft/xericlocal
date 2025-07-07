@@ -1,7 +1,7 @@
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Gear, CheckCircle, Wrench } from 'lucide-react';
+import { Settings, CheckCircle, Wrench } from 'lucide-react';
 import { BlurFade } from '@/components/magicui/blur-fade';
 
 const IndustrialServices = () => {
@@ -28,7 +28,7 @@ const IndustrialServices = () => {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <BlurFade delay={0.1} inView>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/5 border border-primary/10 rounded-full">
-                <Gear className="w-4 h-4 text-primary" />
+                <Settings className="w-4 h-4 text-primary" />
                 <span className="text-sm font-medium text-primary">Industrial Manufacturing</span>
               </div>
             </BlurFade>
@@ -61,7 +61,7 @@ const IndustrialServices = () => {
                 <div className="bg-white border border-border rounded-xl p-8 hover:shadow-lg transition-all duration-300 group">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                      {index === 0 ? <Gear className="w-6 h-6" /> : <Wrench className="w-6 h-6" />}
+                      {index === 0 ? <Settings className="w-6 h-6" /> : <Wrench className="w-6 h-6" />}
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold mb-3 text-foreground">{service.title}</h3>
