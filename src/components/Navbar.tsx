@@ -39,12 +39,12 @@ const Navbar = () => {
       name: 'Business Verticals', 
       path: '/verticals',
       dropdown: [
-        { name: 'Water Utilities Infrastructure', path: '/verticals#water-utilities', description: 'Water treatment and infrastructure solutions' },
-        { name: 'Aerospace', path: '/verticals#aerospace', description: 'Aerospace technology and components' },
-        { name: 'Defense', path: '/verticals#defense', description: 'Defense systems and solutions' },
-        { name: 'Industrial Services', path: '/verticals#industrial', description: 'Comprehensive industrial service solutions' },
-        { name: 'Specialised Tier 2 Supplier', path: '/verticals#tier2', description: 'Specialized supplier services' },
-        { name: 'Portable Power Solutions', path: '/verticals#portable-power', description: 'Mobile and portable power systems' }
+        { name: 'Water Utilities Infrastructure', path: '/water-infrastructure', description: 'Water treatment and infrastructure solutions' },
+        { name: 'Aerospace', path: '/aerospace', description: 'Aerospace technology and components' },
+        { name: 'Defense', path: '/defense', description: 'Defense systems and solutions' },
+        { name: 'Industrial Services', path: '/industrial-services', description: 'Comprehensive industrial service solutions' },
+        { name: 'Specialised Tier 2 Supplier', path: '/tier2-supplier', description: 'Specialized supplier services' },
+        { name: 'Portable Power Solutions', path: '/portable-power', description: 'Mobile and portable power systems' }
       ]
     },
     { 
